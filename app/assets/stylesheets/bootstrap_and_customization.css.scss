@@ -1,2 +1,6 @@
-$body-bg: red;
-@import 'bootstrap';
+$navbar-inverse-bg:       #bdc3c7;
+$navbar-default-link-color: white;
+$brand-primary: #e67e22;
+
+@import 'bootstrap.min';
+@import 'bootstrap-theme.min';
