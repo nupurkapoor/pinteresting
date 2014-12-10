@@ -1,4 +1,5 @@
 Pinteresting::Application.routes.draw do
+  devise_for :users
   root "pages#home"
   get "about" => "pages#about" #this generates about_path variable
   # The priority is based upon order of creation: first created -> highest priority.
