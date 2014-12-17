@@ -26,7 +26,9 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise'
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.1'
+
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 
 group :doc do
