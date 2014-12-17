@@ -30,6 +30,8 @@ gem 'bootstrap-sass', '~> 3.3.1'
 
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
+gem 'paperclip', github: 'thoughtbot/paperclip'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
