@@ -80,4 +80,15 @@ Pinteresting::Application.configure do
 
   #setup default URL
   config.action_mailer.default_url_options = { :host => 'http://pinspire.herokuapp.com/' }
+
+  # Configuration to save Paperclip to Amazon S3 Images on Heroku on Production only.
+  # Sets Paperclip to save images on Amazon S3
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 end
