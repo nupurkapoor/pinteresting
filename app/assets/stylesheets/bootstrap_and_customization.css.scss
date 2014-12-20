@@ -20,6 +20,14 @@ $jumbotron-bg:                white;
      font-weight: bold;
 }
 
+.navbar-nav > li > a:hover{
+  font-weight: bold;
+}
+
 li{
     list-style-type: none;
+}
+
+.glyphicon {
+  color: #c0392b;
 }

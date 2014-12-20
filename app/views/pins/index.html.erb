@@ -1,3 +1,18 @@
+<!-- 
+  To Dos
+  1) Adjust size of image, size down if too big.
+  2) Add an avatar to a user account (uses Paperclip and some modifications to Devise)
+  3) Allow users to sign in with either username or email
+  4) Add Facebook and/or Twitter authentication to app 
+  5) Enable the lockable module in Devise which locks out users if they try a password more than x times
+  
+  Pitch
+  1) Email verification
+  2) Upload multiple images at a time
+  3) Suggest related content - imp for user interaction and engagement 
+-->
+
+
 <%= render 'pages/home' unless user_signed_in? %>
 
 <div id="pins" class="transitions-enabled">
@@ -7,11 +22,11 @@
       <div class="panel-body">
         <%= pin.description %><br/>
         <strong><%= pin.user.name if pin.user %></strong>
-        <% if pin.user == current_user %>
+        <% if current_user && pin.user == current_user %>
           <div class="actions">
             <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span>
-              Edit
+              Edit |
             <% end %>
             <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
               <span class="glyphicon glyphicon-trash"></span>
