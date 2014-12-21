@@ -22,7 +22,6 @@ module Pinteresting
 
     # Required for heroku
     config.assets.initialize_on_precompile = false
-    config.serve_static_assets = true
     require Rails.root.join("lib/custom_public_exceptions")
     config.exceptions_app = CustomPublicExceptions.new(Rails.public_path)
   end
